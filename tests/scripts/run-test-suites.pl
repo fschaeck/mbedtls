@@ -94,10 +94,7 @@ for my $suite (@suites)
         next;
     }
 
-    my $command = "$prefix$suite";
-    if( $verbose ) {
-        $command .= ' -v';
-    }
+    my $command = "$prefix$suite -v";
     my $result = `$command`;
 
     $suite_cases_passed = () = $result =~ /.. PASS/g;
